@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script> -->
+    <script
+      src="https://kit.fontawesome.com/8eb330855f.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.1/css/mdb.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.1/js/mdb.min.js"></script>
+    <title>Document</title>
+    <style>
+        .bio {
+            background-color: #6C757D;
+            display: flex;
+            flex-direction: row;
+            color: white;
+        }
+        .logoo{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        .logoo img{
+            width: 20rem;
+        }
+        .navbarr {
+            display: flex;
+            flex-direction: row;
+            font-size: 14px;
+        }
+        .cover-image img{
+            width: 100%;
+        }
+        .headings {
+            display: flex;
+            flex-direction: row;
+            font-size: 1.5rem;
+            margin: 0 1.5rem 0 1.5rem;
+        }
+        .headings-1 {
+            font-weight: 300;
+            border-bottom: 1px solid #6C757D;
+            margin: 2rem 1rem;
+        }
+        .inspirations{
+            padding: 1rem 0re;
+            margin: 1rem 0;
+        }
+        .inspirations-photos-img {
+            width: 100%;
+            object-fit: cover;
+            height: 8rem;
+        }
+        .inspirations-photos-div{
+            padding: 2px!important;
+        }
+        .inspirations-photos-stream {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            background-color: #EBEBEB;
+            padding: 1px!important;
+        }
+        .footerr{
+            display: flex;
+            flex-direction: column;
+            background-color: #3D464D;
+            color: white;
+            margin-top: 2rem;
+            padding: 2rem;
+        }
+        .footer-main{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin: 0 5rem;
+            text-decoration: none;
+        }
+        .footer-main-links a{
+            color: #BABABA;
+            font-size: 1rem;
+        }
+        .stream-link{
+            width: 4.3333%!important;
+        }
+        .follow-links{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 10%;
+        }
+        .follow-links span{
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            justify-content: space-evenly;
+        }
+        .follow-links span i{
+            background-color: #BABABA;
+            padding: 7%;
+            border-radius: 50%;
+            color: black;
+        }
+        .follow-links span i:hover{
+            color: white;
+            transition: all 0.2s ease-in-out;
+        }
+        .fa-facebook:hover{
+            background-color: #3B5998;
+            transition: all 0.2s ease-in-out;
+        }
+        .fa-instagram:hover{
+            background-color: #DD4B39;
+            transition: all 0.2s ease-in-out;
+        }
+        .fa-youtube:hover{
+            background-color: #BB0000;
+            transition: all 0.2s ease-in-out;
+        }
+        .number{
+            font-size: 1rem;
+        }
+        @media only screen and (max-width: 480px) {
+            .bio{
+                display: none;
+            }
+            .inspirations-photos-img{
+                height: 5rem;
+            }
+            .footer-main{
+                margin: 1rem 2rem;
+                flex-direction: column-reverse;
+            }
+            .footer-main-links{
+                margin-top: 1rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .follow-links{
+                display: flex;
+                justify-content: center;
+                width: auto;
+            }
+            .follow-links span{
+                width: 50%;
+            }
+            .follow-links span i{
+                padding: 5%;
+            }
+        }
+        @media only screen and (min-width: 480px) {
+            .bios{
+                display: none;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <div class="root">
+        <div class="bio">
+            <div style="flex-grow: 1;"></div>
+            <div><i class="fas fa-envelope-square"></i>nikhilcreationgmail.com &nbsp;</div>
+            <div><i class="fas fa-phone-square"></i>+91 9876543210 &nbsp;</div>
+            <div style="flex-grow: 1;"></div>
+            <div><i class="fab fa-facebook"></i>Facebook &nbsp;</div>
+            <div><i class="fab fa-instagram"></i>Instagram &nbsp;</div>
+            <div><i class="fab fa-twitter"></i>Twitter &nbsp;</div>
+            <div style="flex-grow: 1;"></div>
+        </div>
+        <div class="logoo">
+            <img src="01.png"  alt="" srcset=""></img>
+        </div>
+        <nav class="mb-4 navbar navbar-expand-lg navbar-light">
+            <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarSupportedContent-3" aria-controls="navbarSupportedContent-3" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-toggler nav-link waves-effect waves-light"><i class="fab fa-facebook"></i></a>
+            <a class="navbar-toggler nav-link waves-effect waves-light"><i class="fab fa-instagram"></i></a>
+            <a class="navbar-toggler nav-link waves-effect waves-light"><i class="fab fa-twitter"></i></a>
+            <a class="navbar-toggler nav-link waves-effect waves-light"><i class="fas fa-phone-square"></i><span class="number">&nbsp;+91 9876543210</span></a>
+            <a class="navbar-toggler nav-link waves-effect waves-light ml-auto"><i class="fas fa-envelope-square"></i><span class="number">&nbsp;nikhilcreationgmail.com </span></a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent-3">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">HOME <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item dropdown active">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">PHOTOGRAPHY 
+                            </a>
+                        <div class="dropdown-menu dropdown-menu-right dropdown-unique" aria-labelledby="navbarDropdownMenuLink-3">
+                            <a class="dropdown-item" href="#">WEDDING</a>
+                            <a class="dropdown-item" href="#">PRE-WEDDING</a>
+                            <a class="dropdown-item" href="#">STUDIO</a>
+                            <a class="dropdown-item" href="#">PORTRAIT</a>
+                            <a class="dropdown-item" href="#">TRAVEL</a>
+                            <a class="dropdown-item" href="#">KIDS</a>
+                        </div>
+                    </li>
+                                          <li class="nav-item">
+                        <a class="nav-link" href="#">SERVICES</a>
+                    </li>
+                                          <li class="nav-item">
+                        <a class="nav-link" href="#">ABOUT</a>
+                    </li>
+                                          <li class="nav-item">
+                        <a class="nav-link" href="#">CONTACT</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto nav-flex-icons bios">
+                    <!-- <li class="nav-item">
+
+                    </li> -->
+                    <!-- <li class="nav-item">
+
+                    </li> -->
+                    <!-- <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user"></i> 
+                            </a>
+                        <div class="dropdown-menu dropdown-menu-right dropdown-unique" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li> -->
+                </ul>
+            </div>
+        </nav>
+        <div class="cover-image">
+            <img src="cover.jpeg" alt="" srcset=""></img>
+        </div>
+        <div class="headings">
+            <div class="headings-1">PHOTO&nbsp;<b style="font-weight: 600;">INSPIRATIONS</b></div>
+        </div>
+        <div class="row" style="margin: 0 1.5rem 0 1.5rem;">
+            <div class="inspirations col-md-6 col-sm-12">
+                <div class="inspirations-heading">WEDDING</div>
+                <div class="inspirations-photos row">
+                    <div class="row col-sm-11 col-md-11">
+                        <div class="inspirations-photos-div col col-md-3 col-sm-3 col-xs-3" ><img src="image.jpeg" class="inspirations-photos-img"></img></div>
+                        <div class="inspirations-photos-div col col-md-3 col-sm-3 col-xs-3" ><img src="image.jpeg" class="inspirations-photos-img"></img></div>
+                        <div class="inspirations-photos-div col col-md-3 col-sm-3 col-xs-3" ><img src="image.jpeg" class="inspirations-photos-img"></img></div>
+                        <div class="inspirations-photos-div col col-md-3 col-sm-3 col-xs-3" ><img src="image.jpeg" class="inspirations-photos-img"></img></div>
+                    </div>
+                    <div class="stream-link col-sm-1 col-md-1 inspirations-photos-stream"><i class="fas fa-plus"></i></div>
+                </div>
+            </div>
+            <div class="inspirations col-md-6 col-sm-12">
+                <div class="inspirations-heading">PRE-WEDDING</div>
+                <div class="inspirations-photos row">
+                    <div class="row row-cols-4 col-sm-11 col-md-11">
+                        <div class="inspirations-photos-div col col-md-3 col-sm-3 col-xs-3" ><img src="image.jpeg" class="inspirations-photos-img"></img></div>
+                        <div class="inspirations-photos-div col col-md-3 col-sm-3 col-xs-3" ><img src="image.jpeg" class="inspirations-photos-img"></img></div>
+                        <div class="inspirations-photos-div col col-md-3 col-sm-3 col-xs-3" ><img src="image.jpeg" class="inspirations-photos-img"></img></div>
+                        <div class="inspirations-photos-div col col-md-3 col-sm-3 col-xs-3" ><img src="image.jpeg" class="inspirations-photos-img"></img></div>
+                    </div>
+                    <div class="stream-link col-sm-1 col-md-1 inspirations-photos-stream"><i class="fas fa-plus"></i></div>
+                </div>
+            </div>
+            <div class="inspirations col-md-6 col-sm-12">
+                <div class="inspirations-heading">PORTRAIT</div>
+                <div class="inspirations-photos row">
+                    <div class="row row-cols-4 col-sm-11 col-md-11">
+                        <div class="inspirations-photos-div col col-md-3 col-sm-3 col-xs-3" ><img src="image.jpeg" class="inspirations-photos-img"></img></div>
+                        <div class="inspirations-photos-div col col-md-3 col-sm-3 col-xs-3" ><img src="image.jpeg" class="inspirations-photos-img"></img></div>
+                        <div class="inspirations-photos-div col col-md-3 col-sm-3 col-xs-3" ><img src="image.jpeg" class="inspirations-photos-img"></img></div>
+                        <div class="inspirations-photos-div col col-md-3 col-sm-3 col-xs-3" ><img src="image.jpeg" class="inspirations-photos-img"></img></div>
+                    </div>
+                    <div class="stream-link col-sm-1 col-md-1 inspirations-photos-stream"><i class="fas fa-plus"></i></div>
+                </div>
+            </div>
+            <div class="inspirations col-md-6 col-sm-12">
+                <div class="inspirations-heading">STUDIO</div>
+                <div class="inspirations-photos row">
+                    <div class="row row-cols-4 col-sm-11 col-md-11">
+                        <div class="inspirations-photos-div col col-md-3 col-sm-3 col-xs-3" ><img src="image.jpeg" class="inspirations-photos-img"></img></div>
+                        <div class="inspirations-photos-div col col-md-3 col-sm-3 col-xs-3" ><img src="image.jpeg" class="inspirations-photos-img"></img></div>
+                        <div class="inspirations-photos-div col col-md-3 col-sm-3 col-xs-3" ><img src="image.jpeg" class="inspirations-photos-img"></img></div>
+                        <div class="inspirations-photos-div col col-md-3 col-sm-3 col-xs-3" ><img src="image.jpeg" class="inspirations-photos-img"></img></div>
+                    </div>
+                    <div class="stream-link col-sm-1 col-md-1 inspirations-photos-stream"><i class="fas fa-plus"></i></div>
+                </div>
+            </div>
+            <div class="inspirations col-md-6 col-sm-12">
+                <div class="inspirations-heading">TRAVEL</div>
+                <div class="inspirations-photos row">
+                    <div class="row row-cols-4 col-sm-11 col-md-11">
+                        <div class="inspirations-photos-div col col-md-3 col-sm-3 col-xs-3" ><img src="image.jpeg" class="inspirations-photos-img"></img></div>
+                        <div class="inspirations-photos-div col col-md-3 col-sm-3 col-xs-3" ><img src="image.jpeg" class="inspirations-photos-img"></img></div>
+                        <div class="inspirations-photos-div col col-md-3 col-sm-3 col-xs-3" ><img src="image.jpeg" class="inspirations-photos-img"></img></div>
+                        <div class="inspirations-photos-div col col-md-3 col-sm-3 col-xs-3" ><img src="image.jpeg" class="inspirations-photos-img"></img></div>
+                    </div>
+                    <div class="stream-link col-sm-1 col-md-1 inspirations-photos-stream"><i class="fas fa-plus"></i></div>
+                </div>
+            </div>
+            <div class="inspirations col-md-6 col-sm-12">
+                <div class="inspirations-heading">KIDS</div>
+                <div class="inspirations-photos row">
+                    <div class="row row-cols-4 col-sm-11 col-md-11">
+                        <div class="inspirations-photos-div col col-md-3 col-sm-3 col-xs-3" ><img src="image.jpeg" class="inspirations-photos-img"></img></div>
+                        <div class="inspirations-photos-div col col-md-3 col-sm-3 col-xs-3" ><img src="image.jpeg" class="inspirations-photos-img"></img></div>
+                        <div class="inspirations-photos-div col col-md-3 col-sm-3 col-xs-3" ><img src="image.jpeg" class="inspirations-photos-img"></img></div>
+                        <div class="inspirations-photos-div col col-md-3 col-sm-3 col-xs-3" ><img src="image.jpeg" class="inspirations-photos-img"></img></div>
+                    </div>
+                    <div class="stream-link col-sm-1 col-md-1 inspirations-photos-stream"><i class="fas fa-plus"></i></div>
+                </div>
+            </div>
+            
+
+        </div>
+        <div class="footerr">
+            <div class="footer-main">
+                <div class="footer-main-links">
+                    <span>
+                        <a href="">HOME</a>
+                        <span>|</span>
+                        <a href="">WEDDING</a>
+                        <span>|</span>
+                        <a href="">PRE-WEDDING</a>
+                    </span>
+                    <span>
+                        <span>|</span>
+                        <a href="">PORTRAIT</a>
+                        <span>|</span>
+                        <a href="">STUDIO</a>
+                        <span>|</span>
+                        <a href="">TRAVEL</a>
+                        <span>|</span>
+                        <a href="">KIDS</a>
+                        <span>|</span>
+                    </span>
+                    <span>
+                        <a href="">ABOUT US</a>
+                        <span>|</span>
+                        <a href="">CONTACT US</a>
+                        <span>|</span>
+                    </span>
+                </div>
+                <div class="follow-links">
+                    <h6>FOLLOW US ON</h6>
+                    <span>
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-youtube"></i>
+                    </span>
+                </div>
+            </div>
+            <div style="display: flex;justify-content: center;">© 2021 Nikhil Photography.Com</div>
+        </div>
+    </div>
+</body>
+</html>
