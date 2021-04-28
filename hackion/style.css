@@ -1,35 +1,58 @@
 @import url('https://fonts.googleapis.com/css?family=Monoton');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Space+Mono:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 *
 {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Monoton,sans-serif;
+    user-select: none;
+    position: relative;
 }
 
 body
 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     min-height: 100vh;
     background: url('flicker/bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    margin: 2rem 8rem 0 8rem;
+}
+.text-timeline{
+    position: absolute;
+    top: 21vh;
+    color:rgba(255, 255, 255, 0.719);
+    margin: 0 3rem;
+    font-size: 1.5rem;
+}
+.text-timeline p{
+    margin-bottom: 0;
+    letter-spacing: 0.2rem;
 }
 
 h2{
-    font-size: 6em;
+    top: 30vh;
+    position: absolute;
+    font-size: 8em;
     font-weight: 300;
     letter-spacing: 15px;
     color: #EC4F49;
     width: 100%;
-    text-align: center;
     -webkit-box-reflect: below 1px linear-gradient(transparent, #0008);
     line-height: 0.70em;
     outline: none;
     animation: animate 5s linear forwards;
+    font-family: Monoton,sans-serif;
+    text-align: inherit;
+    margin: 0 3rem;
+}
+.text-time{
+    position: absolute;
+    top: 43vh;
+    color:white;
+    margin: 0 3rem;
+    font-size: 8rem;
+    font-weight: 800;
 }
 @keyframes animate {
     0%,18%,20%,50.1%,60%,65.1%,80%,90.1%,92%
@@ -43,7 +66,105 @@ h2{
         0 0 20px #EC4F49,
         0 0 40px #EC4F49,
         0 0 80px #EC4F49,
-        0 0 160px #EC4F49;
-        
+        0 0 160px #EC4F49;   
     }
+}
+
+ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 2rem;
+    font-family: 'Bebas Neue' cursive;
+    margin: 0;
+}
+
+li{
+    list-style: none;
+    color: rgb(235, 235, 235);
+    padding: 0.5rem;
+    margin: 0 1rem;
+}
+
+li:nth-child(1){
+    font-weight: 700;
+    margin: 0;
+}
+li:nth-child(6){
+    flex-grow: 1;
+}
+li:nth-child(7){
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+li:nth-child(8){
+    background-color: #EC4F49;
+    border-radius: 3rem;
+    padding: 0.5rem 3rem;
+    font-size: 1.5rem;
+    margin-right:  1rem;
+}
+li:nth-child(8):hover{
+    color: white;
+    background-color: #EC4F49;
+}
+
+li:hover{
+    color: #EC4F49;
+    transition: all 1s;
+}
+
+.time{
+    position: absolute;
+    top: 65vh;
+    display: flex;
+    flex-direction: row;
+    margin: 0 1.5rem;
+ 
+}
+
+.time-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 1.5rem;
+    background-color: rgba(255, 255, 255, 0.103);
+    color: white;
+    width: 14rem;
+    height: 14rem;
+}
+
+.time-box:nth-child(1){
+    color: #EC4F49;
+    border: 1px solid rgba(255, 255, 255, 0.404);
+    border-bottom: 8px solid #EC4F49;
+}
+.time-box:nth-child(2){
+    color: #F1A104;
+    border: 1px solid rgba(255, 255, 255, 0.404);
+    border-bottom: 8px solid #F1A104;
+}
+.time-box:nth-child(3){
+    color: #00B0EA;
+    border: 1px solid rgba(255, 255, 255, 0.404);
+    border-bottom: 8px solid #00B0EA;
+}
+.time-box:nth-child(4){
+    border: 1px solid rgba(255, 255, 255, 0.404);
+    border-bottom: 8px solid red;
+}
+
+.time-box-integer{
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+/* .time-box-integer */
+
+.time-box-text{
+    color: white;
+    font-weight: 600;
+    letter-spacing: 0.5rem;
 }
