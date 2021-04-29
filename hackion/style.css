@@ -13,7 +13,7 @@
 body
 {
     min-height: 100vh;
-    background: url('flicker/bg.jpg');
+    background: linear-gradient(rgba(150, 150, 150, 0.473),rgba(255, 255, 255, 0)), url('flicker/bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     margin: 2rem 8rem 0 8rem;
@@ -89,7 +89,7 @@ li{
 
 li:nth-child(1){
     font-weight: 700;
-    margin: 0;
+    margin: 0 0 0 0.5rem;
 }
 li:nth-child(6){
     flex-grow: 1;
