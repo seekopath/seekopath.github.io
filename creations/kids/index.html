@@ -1,0 +1,388 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>PlayBox.js: Any Content Lightbox & Gallery Example</title>
+<link href="https://www.cssscript.com/demo/sticky.css" rel="stylesheet" type="text/css">
+<script
+src="https://kit.fontawesome.com/8eb330855f.js"
+crossorigin="anonymous"
+></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.1/css/mdb.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.1/js/mdb.min.js"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.5.2/flatly/bootstrap.min.css">
+<style>
+    html{
+        scroll-behavior: smooth;
+    }
+    .imageList{
+        scroll-behavior: smooth;
+    }
+          .bio {
+            background-color: #6C757D;
+            display: flex;
+            flex-direction: row;
+            color: white;
+        }
+        .logoo{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        .logoo img{
+            width: 20rem;
+        }
+        .navbarr {
+            display: flex;
+            flex-direction: row;
+            font-size: 14px;
+        }
+  .cartBox .container{
+    padding:0  !important;
+    padding-bottom:40px !important;
+    color:#333 !important;
+    height:500px !important;
+    overflow: hidden;
+    position: relative;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+.header {
+  text-align: center;
+  padding: 32px;
+}
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+.gallery-trigger1:hover{
+    border: 4px solid red;
+    background-image: linear-gradient( to bottom, transparent 40%, rgba(0, 0, 0, 0.7) 100% );
+    transition: all 5ms ease-in 3ms;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+  .fa-facebookss{
+    padding: 0.7rem;
+    color: white;
+    border-radius: 1.5rem;
+  }
+  .fa-instagramss{
+    padding: 0.7rem;
+    color: white;
+    border-radius: 1.5rem;
+  }
+  .fa-whatsappss{
+    padding: 0.7rem;
+    color: white;
+    border-radius: 1.5rem;
+  }
+  .navbar-toggler-icon{
+    font-size: 1.5rem;
+  }
+}
+.footerr{
+            display: flex;
+            flex-direction: column;
+            background-color: #3D464D;
+            color: white;
+            margin-top: 2rem;
+            padding: 2rem;
+        }
+        .footer-main{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin: 0 5rem;
+            text-decoration: none;
+        }
+        .footer-main-links a{
+            color: #BABABA;
+            font-size: 1rem;
+        }
+        .stream-link{
+            width: 4.3333%!important;
+        }
+        .follow-links{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 15%;
+        }
+        .follow-links span{
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            justify-content: space-evenly;
+        }
+        .follow-links span i{
+            background-color: #BABABA;
+            padding: 5%;
+            border-radius: 50%;
+            color: black;
+        }
+        .follow-links span i:hover{
+            color: white;
+            transition: all 0.2s ease-in-out;
+        }
+        .fa-facebooks:hover{
+            background-color: #3B5998;
+            transition: all 0.2s ease-in-out;
+        }
+        .fa-instagrams:hover{
+            background-color: #DD4B39;
+            transition: all 0.2s ease-in-out;
+        }
+        .fa-youtubes:hover{
+            background-color: #BB0000;
+            transition: all 0.2s ease-in-out;
+        }
+        .fa-whatsapps:hover{
+            background-color: #13940A;
+            transition: all 0.2s ease-in-out;
+        }
+        .fa-facebookss{
+            background-color: #3B5998;
+        }
+        .fa-instagramss{
+            background-color: #DD4B39;
+        }
+        .fa-youtubess{
+            background-color: #BB0000;
+        }
+        .fa-whatsappss{
+            background-color: #13940A;
+        }
+        .number{
+            font-size: 1rem;
+        }
+        .dropdown-item:hover{
+            background-color: #6C757D!important;
+        }
+        .foot{
+            color: #BABABA;
+        }
+        @media only screen and (max-width: 480px) {
+            .bio{
+                display: none;
+            }
+            .footer-main{
+                margin: 1rem 2rem;
+                flex-direction: column-reverse;
+            }
+            .footer-main-links{
+                margin-top: 1rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .footer-main-links span a,span{
+                font-size: 12px;
+            }
+            .follow-links{
+                display: flex;
+                justify-content: center;
+                width: auto;
+            }
+            .follow-links span{
+                width: 50%;
+            }
+            .follow-links span i{
+                padding: 5%;
+            }
+            .foot{
+                margin: 1rem;
+            }
+        }
+        @media only screen and (min-width: 480px) {
+            .bios{
+                display: none;
+            }
+
+        }
+        ::-webkit-scrollbar {
+            width: 0px;
+        }
+</style>
+</head>
+
+<body>
+  <div class="bio">
+    <div style="flex-grow: 1;"></div>
+    <div><i class="fas fa-envelope-square"></i>nikhilcreation@gmail.com &nbsp;</div>
+    <div><i class="fas fa-phone-square"></i>+91 9876543210 &nbsp;</div>
+    <div style="flex-grow: 1;"></div>
+    <div><i class="fab fa-facebook"></i>Facebook &nbsp;</div>
+    <div><i class="fab fa-instagram"></i>Instagram &nbsp;</div>
+    <div><i class="fab fa-whatsapp"></i>Whatsapp &nbsp;</div>
+    <div style="flex-grow: 1;"></div>
+</div>
+<nav class="mb-4 navbar navbar-expand-lg navbar-light">
+    <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarSupportedContent-3" aria-controls="navbarSupportedContent-3" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-toggler nav-link waves-effect waves-light"><i class="fab fa-facebook  fa-facebookss"></i></a>
+    <a class="navbar-toggler nav-link waves-effect waves-light"><i class="fab fa-instagram  fa-instagramss"></i></a>
+    <a class="navbar-toggler nav-link waves-effect waves-light"><i class="fab fa-whatsapp  fa-whatsappss"></i></a>
+    <!-- <a class="navbar-toggler nav-link waves-effect waves-light"><i class="fas fa-phone-square"></i><span class="number">&nbsp;+91 9876543210</span></a> -->
+    <!-- <a class="navbar-toggler nav-link waves-effect waves-light ml-auto"><i class="fas fa-envelope-square"></i><span class="number">&nbsp;nikhilcreationgmail.com </span></a> -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent-3">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#">HOME <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown active">
+                <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">PHOTOGRAPHY 
+                    </a>
+                <div class="dropdown-menu dropdown-menu-right dropdown-unique" aria-labelledby="navbarDropdownMenuLink-3">
+                    <a class="dropdown-item" href="#">WEDDING</a>
+                    <a class="dropdown-item" href="#">PRE-WEDDING</a>
+                    <a class="dropdown-item" href="#">STUDIO</a>
+                    <a class="dropdown-item" href="#">PORTRAIT</a>
+                    <a class="dropdown-item" href="#">TRAVEL</a>
+                    <a class="dropdown-item" href="#">KIDS</a>
+                </div>
+            </li>
+                                  <li class="nav-item">
+                <a class="nav-link" href="#">SERVICES</a>
+            </li>
+                                  <li class="nav-item">
+                <a class="nav-link" href="#">ABOUT</a>
+            </li>
+                                  <li class="nav-item">
+                <a class="nav-link" href="#">CONTACT</a>
+            </li>
+        </ul>
+        <ul class="navbar-nav ml-auto nav-flex-icons bios">
+        </ul>
+    </div>
+</nav>
+  <div class="container">
+    <h1>Babies</h1>
+    <div style="margin:30px auto"><div id="carbon-block"></div>
+</div>
+    <div class="playboximage imageGallaryBox1"></div>
+    <div class="gallery-trigger"> 
+              <img class="col-lg-3 col-md-4 col-12 gallery-trigger1" onClick="setactivebg(this.getAttribute('src'))" src="https://images.unsplash.com/photo-1543062094-d22540cadf2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDV8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60" style="width:100%">
+              <img class="col-lg-3 col-md-4 col-12 gallery-trigger1" onClick="setactivebg(this.getAttribute('src'))" src="https://images.unsplash.com/photo-1580151713793-30a0df886358?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE2fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60" style="width:100%">
+              <img class="col-lg-3 col-md-4 col-12 gallery-trigger1" onClick="setactivebg(this.getAttribute('src'))" src="https://images.unsplash.com/photo-1619558041249-0523903712e1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" style="width:100%">
+              <img class="col-lg-3 col-md-4 col-12 gallery-trigger1" onClick="setactivebg(this.getAttribute('src'))" src="https://images.unsplash.com/photo-1613032970340-7846189c1cbe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDZ8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60" style="width:100%">
+              <img class="col-lg-3 col-md-4 col-12 gallery-trigger1" onClick="setactivebg(this.getAttribute('src'))" src="https://images.unsplash.com/photo-1583784161563-a0183c5412ca?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDd8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60" style="width:100%">
+              <img class="col-lg-3 col-md-4 col-12 gallery-trigger1" onClick="setactivebg(this.getAttribute('src'))" src="https://images.unsplash.com/photo-1469633493068-14bbd37e2fba?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDl8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60" style="width:100%">
+              <img class="col-lg-3 col-md-4 col-12 gallery-trigger1" onClick="setactivebg(this.getAttribute('src'))" src="https://images.unsplash.com/photo-1414839246800-1ed50eb905e7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE5fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60" style="width:100%">
+      </div>
+  </div>
+  <div class="footerr">
+    <div class="footer-main">
+        <div class="footer-main-links">
+            <span>
+                <a href="">HOME</a>
+                <span>|</span>
+                <a href="">WEDDING</a>
+                <span>|</span>
+                <a href="">PRE-WEDDING</a>
+            </span>
+            <span>
+                <span>|</span>
+                <a href="">PORTRAIT</a>
+                <span>|</span>
+                <a href="">STUDIO</a>
+                <span>|</span>
+                <a href="">TRAVEL</a>
+                <span>|</span>
+                <a href="">KIDS</a>
+                <span>|</span>
+            </span>
+            <span>
+                <a href="">ABOUT US</a>
+                <span>|</span>
+                <a href="">CONTACT US</a>
+                <span>|</span>
+            </span>
+        </div>
+        <div class="foot">
+            <a class=" d-flex justify-content-center " style="align-items: center;"><i class="fas fa-envelope-square"></i><span class="number">&nbsp;nikhilcreationgmail.com </span></a>
+            <a class=" d-flex justify-content-center " style="align-items: center;"><i class="fas fa-phone-square"></i><span class="number">&nbsp;+91 9876543210</span></a>
+        </div>
+
+        <div class="follow-links">
+            <h6 style="color: #BABABA;">FOLLOW US</h6>
+            <span>
+                <i class="fab fa-facebook fa-facebooks"></i>
+                <i class="fab fa-instagram fa-instagrams"></i>
+                <i class="fab fa-youtube fa-youtubes"></i>
+                <i class="fab fa-whatsapp fa-whatsapps"></i>
+            </span>
+        </div>
+    </div>
+    <div style="display: flex;justify-content: center; color: #BABABA;">© 2021 Nikhil Photography.Com</div>
+</div>
+<script src="app.js"></script>
+<script>
+var array = [];
+var activeindex = [];
+var x = document.getElementsByClassName("gallery-trigger1");
+for (var i = 0; i < x.length; i++) {
+   array.push(x[i].src);
+}
+function setactivebg(src){
+    for (var i = 0; i < x.length; i++) {
+        if(x[i].getAttribute('src')==src){
+            PlayBox.imageOpen('.gallery-trigger', '.imageGallaryBox1', array, 200, 200,i);
+        }
+    }
+}
+
+// PlayBox.imageOpen('.gallery-trigger', '.imageGallaryBox1', array, 200, 200);
+</script>
+</body>
+</html>
+
