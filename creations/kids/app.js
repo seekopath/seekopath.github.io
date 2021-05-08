@@ -1,6 +1,9 @@
 
 "use strict";
+
 const PlayBox = (function(){
+    const state = new Map();
+
     (function(){
         const containerStyle = document.createElement('style');
         const imageBoxStyle = document.createElement('style');
@@ -110,7 +113,7 @@ const PlayBox = (function(){
             
             /* New Element Styling in the Container */
             .playboximage .bgImage{
-                width:100%;
+                width:auto;
                 height: 100%;
             }
             
@@ -172,9 +175,7 @@ const PlayBox = (function(){
                     height: 350px !important;
                 }
                 .playboximage .arrow{
-                    background-color: rgba(124, 124, 124, 0.6);
                     top:50%;
-                    box-shadow: 0 0 6px rgba(90, 90, 90, 0.6);
                     transform: translateY(-50%);
                 }
             
@@ -248,6 +249,7 @@ const PlayBox = (function(){
             element.setAttribute("style", "display:none;");
             myfun();
         },duration);
+        
     }
 
     var fadeSlideIn = function(element, duration=100, myfun=()=>{}){
@@ -324,32 +326,40 @@ const PlayBox = (function(){
         });
     };
 
+    // state.set(boxTarget+'active', 0);
+
+
     return {
         // PlayBox Open
         open : function(boxButton, boxTarget, enter=300, exit=300){
             loadBox(boxButton,boxTarget, enter, exit);
         },
 
+        getactivebg : function(src){
+            // console.log(src);
+        },
+
         // PlayBox Image Slider 
         imageOpen : function(boxButton, boxTarget, imageList=[], enter=300, exit=300,i=0){
-            prepend(boxTarget, `<div class="container">
+            prepend(boxTarget, `<div class="container containerbg">
                                     <span class="leftarrow arrow">&lt;</span>
                                     <img id="bgImage" class="bgImage">
                                     <span class="rightarrow arrow">&gt;</span>
                                 </div>
                                 <div class="container">
-                                    <span class="leftarrow arrow wingarrow" style="top: 0vh">&lt;</span>
-                                    <div id="imageList" class="imageList"></div>
-                                    <span class="rightarrow arrow wingarrow"  style="top: 0vh">&gt;</span>
+                                    <span class="leftarrow arrow wingarrow">&lt;</span>
+                                    <span><div id="imageList" class="imageList"></div></span>
+                                    <span class="rightarrow arrow wingarrow">&gt;</span>
                                 </div>`)
             loadBox(boxButton,boxTarget, enter, exit);
 
             // State Managment throught HashMap
-            const state = new Map();
+            // const state = new Map();
             state.set(boxTarget+'active', 0);
             
             // Active Image : boxTarget+'active'
             const imgListElement = getElement(boxTarget +' .imageList');
+            console.log(imgListElement);
             
             // adding Image to the list
             imageList.forEach((item,index)=>{
@@ -370,7 +380,6 @@ const PlayBox = (function(){
                 })
                 const element = document.getElementById("imageList");
                 element.scrollLeft = 100*index;
-                console.log(element.scrollLeft);
                 state.set(boxTarget+'active', index);
             }
             setActive(i);
@@ -400,9 +409,19 @@ const PlayBox = (function(){
 
             //Item List Click Handler
             click(imgListElement, function(event){
+                console.log(event);
                 const target = event.target;
                 if(is(target, 'img')){
                     setActive(index(target));
+                }
+            });
+            //Item List Click Handler
+            var imagell = getElement(' .gallery-trigger');
+            click(imagell, function(event){
+                const target = event.target;
+                if(is(target, 'img')){
+                    setActive(index(target));
+                    console.log(index(target));
                 }
             });
         },
@@ -421,3 +440,12 @@ const PlayBox = (function(){
         click: click,
     }
 })();
+
+var activebg = function(src){
+    var x = document.getElementsByClassName("gallery-trigger1");
+    for (var i = 0; i < x.length; i++) {
+        if(x[i].getAttribute('src')==src){
+            PlayBox.getactivebg(i);
+        }
+    }
+}
