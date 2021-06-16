@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@300&family=Roboto:wght@100&display=swap');
+body{
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    font-weight: 400;
+    color: white;
+    background-color: #333236;
+    background-image: linear-gradient(315deg,#4c4177 0%, #171f1b 74%);
+}
+
+.container{
+    padding: 2rem;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.top-section{
+    text-align: center;
+    padding: 4rem 0;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.timeline{
+    position: relative;
+    min-height: 150px;
+}
+
+.line{
+    position: absolute;
+    z-index: 2;
+    left: calc(50% - 1px);
+    width: 2px;
+    top: -50px;
+    background-color: #000;
+    display: none;
+}
+
+.line::before,
+.line::after{
+    position: absolute;
+    display: block;
+    content: '';
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    background-color: #000;
+    left: 505;
+    transform: translateX(-50%);
+}
+
+.line:after{
+    bottom: 0;
+}
+
+.section{
+    display: flex;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: 600ms ease;
+    position: relative;
+    z-index: 1;
+    margin: 50px 0;
+    padding: 1rem;
+    border-radius: 1rem;
+    align-items: center;
+    min-height: 300px;
+}
+.calendar{
+    display: none!important;
+}
+
+.section:nth-child(odd){
+    flex-direction: row-reverse;
+    transform: translateX(100%);
+}
+
+.bead{
+    position: absolute;
+    display: block;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    background-color: #000;
+    left: 50%;
+    top: 20%;
+    transform: translateX(-50%);
+}
+
+.content{
+    width: calc(50% - 2rem);
+}
+
+.content h2{
+    font-family: 'Roboto', sans-serif;
+}
+
+p{
+    font-family: 'Poppins', sans-serif;
+}
+
+.calendar{
+    border: 1px solid white;
+    border-radius: 3%;
+    padding: 4%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.calendar p{
+    margin: 0;
+}
+
+.show-me:nth-child(n){
+    transform: none;
+    opacity: 1;
+}
+
+h1{
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+
+@media only screen and (max-width: 425px) {
+    .container{
+        padding: 2%;
+    }
+    .top-section{
+        padding: 1% 0 15% 0;
+    }
+    .calendar{
+        width: 100%;
+    }
+    .line{
+        top: 0;
+        bottom: 0!important;
+    }
+    .section{
+        margin: 0;
+        min-height: 7rem;
+    }
+    .bead{
+        top: 42%;
+    }
+    h2{
+        font-size: 1.2rem;
+        font-weight: 100;
+    }
+    p{
+        font-size: 0.8rem;
+    }
+}
+
+
+@media only screen and (max-width: 768px) and (min-width: 426px) {
+    .container{
+        padding: 0 20% 5% 20%;
+    }
+    .top-section{
+        padding: 1% 0 15% 0;
+    }
+    .calendar{
+        width: 80%;
+    }
+    .line{
+        top: 0;
+        bottom: 0!important;
+    }
+    .section{
+        margin: 0;
+        min-height: 7rem;
+    }
+    .bead{
+        top: 42%;
+    }
+    h2{
+        font-size: 2rem;
+        font-weight: 100;
+    }
+    p{
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    .container{
+        padding: 0 30% 5% 30%;
+    }
+    .top-section{
+        padding: 1% 0 15% 0;
+    }
+    .calendar{
+        width: 60%;
+    }
+    .line{
+        top: 0;
+        bottom: 0!important;
+    }
+    .section{
+        margin: 0;
+        min-height: 7rem;
+    }
+    .bead{
+        top: 42%;
+    }
+    h1{
+        font-size: 3rem;
+    }
+    h2{
+        font-size: 2rem;
+        font-weight: 100;
+    }
+    p{
+        font-size: 1rem;
+    }
+}
